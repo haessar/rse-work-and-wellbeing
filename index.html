@@ -200,12 +200,37 @@
     footer {
       background: var(--poster-grey);
       margin-top: 3rem;
-      padding: 1.5rem;
+      padding: 2rem 1.5rem 1.5rem;
       color: #505050;
       font-size: 0.9rem;
     }
 
-    footer p:first-child {
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .footer-logos img {
+      display: block;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .irs-logo {
+      max-width: 240px;
+      max-height: 80px;
+    }
+
+    .uofg-logo {
+      /* max-width: 2px; */
+      max-height: 110px;
+    }
+
+    footer p:first-of-type {
       margin-top: 0;
     }
 
@@ -230,6 +255,20 @@
         width: 48px;
         height: 48px;
         bottom: 1rem;
+      }
+
+      .footer-logos {
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .irs-logo {
+        max-width: 220px;
+      }
+
+      .uofg-logo {
+        /* max-width: 190px; */
+        max-height: 100px;
       }
     }
   </style>
@@ -332,6 +371,21 @@
     </section>
 
     <footer>
+
+      <div class="footer-logos">
+        <img
+          class="irs-logo"
+          src="assets/logos/SSI_logo_footer.svg"
+          alt="Institute for Research Software"
+        >
+
+        <img
+          class="uofg-logo"
+          src="assets/logos/Unboxed%20colour%20logo%20blue%20text.svg"
+          alt="University of Glasgow"
+        >
+      </div>
+
       <p>
         This study is supported by the Institute for Research Software
         and the University of Glasgow.
