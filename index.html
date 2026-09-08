@@ -29,6 +29,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -139,6 +143,7 @@
       border: 2px solid var(--orange);
       border-radius: 14px;
       padding: 1.5rem;
+      scroll-margin-top: 1.5rem;
     }
 
     .signup h2 {
@@ -151,6 +156,42 @@
       height: 520px;
       border: 0;
       margin-top: 1rem;
+    }
+
+    .jump-to-signup {
+      position: fixed;
+      left: 50%;
+      bottom: 1.5rem;
+      transform: translateX(-50%);
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--orange);
+      color: white;
+      border: 2px solid white;
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+      text-decoration: none;
+      font-size: 1.8rem;
+      line-height: 1;
+      z-index: 1000;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+    .jump-to-signup:hover,
+    .jump-to-signup:focus {
+      background: var(--orange-dark);
+      transform: translateX(-50%) translateY(-2px);
+    }
+
+    .jump-to-signup.hidden {
+      opacity: 0;
+      pointer-events: none;
     }
 
     footer {
@@ -172,6 +213,12 @@
 
       .form-frame {
         height: 600px;
+      }
+
+      .jump-to-signup {
+        width: 48px;
+        height: 48px;
+        bottom: 1rem;
       }
     }
   </style>
@@ -251,7 +298,7 @@
       </div>
     </section>
 
-    <section class="signup">
+    <section class="signup" id="register-interest">
       <h2>Register your interest</h2>
 
       <p>
@@ -297,6 +344,31 @@
     </footer>
 
   </main>
+
+  <a
+    class="jump-to-signup"
+    href="#register-interest"
+    aria-label="Jump to expression of interest form"
+    title="Register your interest"
+  >
+    ↓
+  </a>
+
+  <script>
+    const signupSection = document.getElementById("register-interest");
+    const jumpButton = document.querySelector(".jump-to-signup");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        jumpButton.classList.toggle("hidden", entry.isIntersecting);
+      },
+      {
+        threshold: 0.1
+      }
+    );
+
+    observer.observe(signupSection);
+  </script>
 
 </body>
 </html>
