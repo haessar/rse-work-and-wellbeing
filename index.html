@@ -21,6 +21,8 @@
       --background: #f7f7f5;
       --panel: #ffffff;
       --border: #dddddd;
+      --disabled-bg: #d8d8d8;
+      --disabled-text: #6b6b6b;
     }
 
     * {
@@ -87,6 +89,25 @@
     .status h2 {
       color: var(--orange);
       margin-top: 0;
+    }
+
+    .survey-button {
+      display: inline-block;
+      margin-top: 0.6rem;
+      padding: 0.8rem 1.3rem;
+      border: 0;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      background: var(--disabled-bg);
+      color: var(--disabled-text);
+      cursor: not-allowed;
+    }
+
+    .status-note {
+      margin: 0.5rem 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
     .methods {
@@ -174,8 +195,16 @@
       <h2>Survey opening soon</h2>
 
       <p>
-        We are currently preparing the survey for launch. If you would like
-        to be notified when it opens, you can register your interest below.
+        The survey is currently being prepared for launch and is pending
+        ethical and data protection approval.
+      </p>
+
+      <button class="survey-button" type="button" disabled>
+        Take the survey
+      </button>
+
+      <p class="status-note">
+        Survey link not yet available.
       </p>
     </section>
 
@@ -201,19 +230,24 @@
       <h2>What will we explore?</h2>
 
       <div class="methods">
+
         <div class="method">
           <h3>Quantitative</h3>
           <p class="purpose">Identify patterns</p>
-          <p>Working arrangements, wellbeing and workplace support.</p>
+          <p>
+            Working arrangements, wellbeing and workplace support.
+          </p>
         </div>
 
         <div class="method">
           <h3>Qualitative</h3>
           <p class="purpose">Understand experiences</p>
           <p>
-            Strategies and adjustments that support wellbeing and motivation.
+            Strategies and adjustments that support wellbeing
+            and motivation.
           </p>
         </div>
+
       </div>
     </section>
 
@@ -221,9 +255,8 @@
       <h2>Register your interest</h2>
 
       <p>
-        Enter your email address if you would like to be notified when the
-        survey opens. Your email address will only be used for that purpose
-        and will not be linked to your survey responses.
+        If you would like to be notified when the survey opens,
+        enter your email address below.
       </p>
 
       <iframe
@@ -249,7 +282,9 @@
       <p>
         Except where otherwise stated, original content on this site is
         licensed under
-        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>.
         Third-party logos and other materials remain subject to their
         respective terms of use.
       </p>
