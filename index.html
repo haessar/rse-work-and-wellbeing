@@ -15,12 +15,15 @@
     :root {
       --orange: #c95722;
       --orange-dark: #98401d;
+      --orange-light: #e88f67;
+      --orange-light-hover: #d97850;
       --blue: #17687c;
       --text: #222222;
       --muted: #666666;
       --background: #f7f7f5;
       --panel: #ffffff;
       --border: #dddddd;
+      --poster-grey: #dddddd;
       --disabled-bg: #d8d8d8;
       --disabled-text: #6b6b6b;
     }
@@ -168,7 +171,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--orange);
+      background: var(--orange-light);
       color: white;
       border: 2px solid white;
       border-radius: 8px;
@@ -185,7 +188,7 @@
 
     .jump-to-signup:hover,
     .jump-to-signup:focus {
-      background: var(--orange-dark);
+      background: var(--orange-light-hover);
       transform: translateX(-50%) translateY(-2px);
     }
 
@@ -195,11 +198,19 @@
     }
 
     footer {
-      border-top: 1px solid var(--border);
+      background: var(--poster-grey);
       margin-top: 3rem;
-      padding-top: 1.5rem;
-      color: var(--muted);
+      padding: 1.5rem;
+      color: #505050;
       font-size: 0.9rem;
+    }
+
+    footer p:first-child {
+      margin-top: 0;
+    }
+
+    footer p:last-child {
+      margin-bottom: 0;
     }
 
     footer a {
