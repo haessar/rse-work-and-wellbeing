@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RSE Work and Wellbeing Survey</title>
+
+  <meta
+    name="description"
+    content="Neurodiversity, work structure, and support in Research Software Engineering: an InclusiveRSE and SSI Fellowship survey study."
+  >
+
+  <style>
+    :root {
+      --orange: #c95722;
+      --orange-dark: #98401d;
+      --blue: #17687c;
+      --text: #222222;
+      --muted: #666666;
+      --background: #f7f7f5;
+      --panel: #ffffff;
+      --border: #dddddd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    header {
+      background: linear-gradient(
+        180deg,
+        #ed9a70 0%,
+        var(--orange) 70%,
+        var(--orange-dark) 100%
+      );
+      color: white;
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      max-width: 900px;
+      margin: 0 auto 0.7rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.15;
+    }
+
+    header p {
+      margin: 0.3rem auto;
+      max-width: 800px;
+      font-size: 1.2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      color: var(--blue);
+      font-size: 1.7rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .status {
+      background: var(--panel);
+      border-left: 6px solid var(--orange);
+      padding: 1.3rem 1.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .status h2 {
+      color: var(--orange);
+      margin-top: 0;
+    }
+
+    .methods {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .method {
+      background: var(--panel);
+      border: 2px solid #a8ccd4;
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+
+    .method h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.25rem;
+    }
+
+    .method .purpose {
+      margin: 0 0 0.8rem;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .signup {
+      background: var(--panel);
+      border: 2px solid var(--orange);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    .signup h2 {
+      color: var(--orange);
+      margin-top: 0;
+    }
+
+    .form-frame {
+      width: 100%;
+      height: 520px;
+      border: 0;
+      margin-top: 1rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: inherit;
+    }
+
+    @media (max-width: 650px) {
+      .methods {
+        grid-template-columns: 1fr;
+      }
+
+      .form-frame {
+        height: 600px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>
+      Neurodiversity, work structure, and support in
+      Research Software Engineering
+    </h1>
+
+    <p>An InclusiveRSE and SSI Fellowship survey study</p>
+    <p>Dr William Haese-Hill · University of Glasgow</p>
+  </header>
+
+  <main>
+
+    <section class="status">
+      <h2>Survey opening soon</h2>
+
+      <p>
+        We are currently preparing the survey for launch. If you would like
+        to be notified when it opens, you can register your interest below.
+      </p>
+    </section>
+
+    <section>
+      <h2>About the study</h2>
+
+      <p>
+        We are surveying Research Software Engineers working in the UK
+        to better understand how neurodivergence, mental health and
+        working arrangements relate to wellbeing, support and productivity.
+      </p>
+
+      <p>
+        The study follows work by <strong>InclusiveRSE</strong> exploring
+        the experiences of RSEs from underrepresented groups, alongside
+        work such as the SSI Fellowship project <strong>ConveRSE</strong>
+        highlighting mental health and wellbeing within the research
+        software community.
+      </p>
+    </section>
+
+    <section>
+      <h2>What will we explore?</h2>
+
+      <div class="methods">
+        <div class="method">
+          <h3>Quantitative</h3>
+          <p class="purpose">Identify patterns</p>
+          <p>Working arrangements, wellbeing and workplace support.</p>
+        </div>
+
+        <div class="method">
+          <h3>Qualitative</h3>
+          <p class="purpose">Understand experiences</p>
+          <p>
+            Strategies and adjustments that support wellbeing and motivation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="signup">
+      <h2>Register your interest</h2>
+
+      <p>
+        Enter your email address if you would like to be notified when the
+        survey opens. Your email address will only be used for that purpose
+        and will not be linked to your survey responses.
+      </p>
+
+      <iframe
+        class="form-frame"
+        src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=KVxybjp2UE-B8i4lTwEzyLJsaHBCH0tNj-PzRCEemnZUME4zTjU5MzRQUjE5Qk43WFZRTVhBSkpYUy4u&amp;embed=true"
+        title="RSE Work and Wellbeing Survey - Expression of Interest"
+        frameborder="0"
+        marginwidth="0"
+        marginheight="0"
+        allowfullscreen
+        webkitallowfullscreen
+        mozallowfullscreen
+        msallowfullscreen>
+      </iframe>
+    </section>
+
+    <footer>
+      <p>
+        This study is supported by the Software Sustainability Institute
+        and the University of Glasgow.
+      </p>
+
+      <p>
+        Except where otherwise stated, original content on this site is
+        licensed under
+        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+        Third-party logos and other materials remain subject to their
+        respective terms of use.
+      </p>
+
+      <p>
+        <a href="https://github.com/haessar/rse-work-and-wellbeing">
+          View this project on GitHub
+        </a>
+      </p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
