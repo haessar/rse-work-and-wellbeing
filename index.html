@@ -85,6 +85,17 @@
       margin-bottom: 0.6rem;
     }
 
+    .inline-link {
+      color: var(--blue);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .inline-link:hover,
+    .inline-link:focus {
+      text-decoration: underline;
+    }
+
     .status {
       background: var(--panel);
       border-left: 6px solid var(--orange);
@@ -139,6 +150,76 @@
       margin: 0 0 0.8rem;
       font-style: italic;
       color: var(--muted);
+    }
+
+    .resources {
+      margin-top: 3rem;
+    }
+
+    .resource-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .resource-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .resource-item + .resource-item {
+      border-top: 1px solid var(--border);
+    }
+
+    .resource-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 90px;
+    }
+
+    .resource-logo-link {
+      display: block;
+    }
+
+    .resource-logo {
+      display: block;
+      width: 170px;
+      max-width: 100%;
+      max-height: 90px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .inclusive-logo {
+      width: 185px;
+      max-height: 75px;
+    }
+
+    .resource-content h3 {
+      margin: 0 0 0.3rem;
+      font-size: 1.3rem;
+      color: var(--blue);
+    }
+
+    .resource-content p {
+      margin: 0 0 0.7rem;
+    }
+
+    .resource-link {
+      color: var(--blue);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .resource-link:hover,
+    .resource-link:focus {
+      text-decoration: underline;
     }
 
     .signup {
@@ -226,7 +307,6 @@
     }
 
     .uofg-logo {
-      /* max-width: 2px; */
       max-height: 110px;
     }
 
@@ -245,6 +325,25 @@
     @media (max-width: 650px) {
       .methods {
         grid-template-columns: 1fr;
+      }
+
+      .resource-item {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+
+      .resource-visual {
+        justify-content: flex-start;
+        min-height: auto;
+      }
+
+      .resource-logo {
+        width: 155px;
+      }
+
+      .inclusive-logo {
+        width: 170px;
+        max-height: 70px;
       }
 
       .form-frame {
@@ -267,7 +366,6 @@
       }
 
       .uofg-logo {
-        /* max-width: 190px; */
         max-height: 100px;
       }
     }
@@ -315,9 +413,22 @@
       </p>
 
       <p>
-        The study follows work by <strong>InclusiveRSE</strong> exploring
-        the experiences of RSEs from underrepresented groups, alongside
-        work such as the Institute for Research Software (formerly SSI) Fellowship project <strong>ConveRSE</strong>
+        The study follows work by
+        <a
+          class="inline-link"
+          href="https://www.software.ac.uk/publication/edi-research-strategy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >InclusiveRSE</a>
+        exploring the experiences of RSEs from underrepresented groups,
+        alongside work such as the Institute for Research Software
+        (formerly SSI) Fellowship project
+        <a
+          class="inline-link"
+          href="https://converse.mdsimpson.co.uk/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >ConveRSE</a>
         highlighting mental health and wellbeing within the research
         software community.
       </p>
@@ -344,6 +455,91 @@
             and motivation.
           </p>
         </div>
+
+      </div>
+    </section>
+
+    <section class="resources">
+      <h2>Related resources</h2>
+
+      <div class="resource-card">
+
+        <div class="resource-item">
+
+          <div class="resource-visual">
+            <a
+              class="resource-logo-link"
+              href="https://www.software.ac.uk/publication/edi-research-strategy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Learn about InclusiveRSE"
+            >
+              <img
+                class="resource-logo inclusive-logo"
+                src="assets/logos/SSI_logo_footer.svg"
+                alt="Institute for Research Software"
+              >
+            </a>
+          </div>
+
+          <div class="resource-content">
+            <h3>InclusiveRSE</h3>
+
+            <p>
+              Research and guidance focused on improving EDIA across the RSE community.
+            </p>
+
+            <a
+              class="resource-link"
+              href="https://www.software.ac.uk/blog/equity-diversity-inclusivity-and-accessibility-research-software-engineering-guidelines-making"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read the InclusiveRSE guidelines →
+            </a>
+          </div>
+
+        </div>
+
+        <div class="resource-item">
+
+          <div class="resource-visual">
+            <a
+              class="resource-logo-link"
+              href="https://converse.mdsimpson.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit the ConveRSE website"
+            >
+              <img
+                class="resource-logo"
+                src="assets/logos/converse-logo-blue.png"
+                alt="ConveRSE"
+              >
+            </a>
+          </div>
+
+          <div class="resource-content">
+            <h3>ConveRSE</h3>
+
+            <p>
+              Exploring mental health and wellbeing in the research
+              software community.
+            </p>
+
+            <a
+              class="resource-link"
+              href="https://converse.mdsimpson.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit ConveRSE →
+            </a>
+          </div>
+
+        </div>
+
+        
 
       </div>
     </section>
